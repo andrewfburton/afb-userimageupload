@@ -1,0 +1,461 @@
+.auiu-post-form{ 
+	list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#auiu-ft-upload-container {
+	border: 1px dashed #ccc;
+	margin-left: 25%;
+	padding-top: 15px;
+    padding-bottom: 10px;
+}	
+.auiu-post-form li {
+	margin: 5px 0;
+	padding: 0;}
+.auiu-post-form label {
+	float: left;
+	font-weight: bold;
+	height: 20px;
+	margin: 0;
+	width: 25%;
+	padding: 0 10px 0 0;
+	font-size: 12px;
+	cursor: pointer;
+}.auiu-post-form input, .auiu-post-form textarea, .auiu-post-form select {
+	margin: 0;
+	padding: 5px;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}.auiu-post-form input:focus, .auiu-post-form textarea:focus, .auiu-post-form select:focus {    
+	background: #F2F2F2;
+}
+.auiu-post-form .childCategory {    
+	padding-top: 5px;
+}
+.auiu-post-form input[type=text]{    
+	width: 75%;
+}.auiu-post-form textarea {
+	width: 75%;
+}
+.auiu-post-form .auiu-check-container {    
+	float: left;
+	width: 75%;
+}
+.auiu-post-form input[type="submit"] {	
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 12px 15px 11px 15px;
+	background: #4090BA;
+	white-space: nowrap;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	text-shadow: none;
+	margin-top: 15px;
+	margin-left: 25%;
+}
+.auiu-post-form input[type="submit"]:hover {
+	text-decoration: none;
+	color: #FFF;
+	background: #3981A7;
+}
+a#auiu-ft-upload-pickfiles, #auiu-ft-upload-filelist .button {
+	color: #FFF;
+	font-weight: bold;
+	padding: 12px 15px 11px 15px;
+	background: #4090BA;
+	line-height: 1;
+	white-space: nowrap;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	text-decoration: none;
+	margin-bottom: 8px;
+	z-index: 99999999;
+}
+/*#auiu-ft-upload-pickfiles:active {
+	text-decoration: none;
+	color: #FFF;
+	background: #3981A7;
+}*/
+a#auiu-ft-upload-pickfiles:hover, #auiu-ft-upload-filelist .button:hover { 
+	text-decoration: none;
+	color: #FFF;
+	background: #3981A7;
+}
+#auiu-ft-upload-container > button, #auiu-ft-upload-container > button:hover, #auiu-ft-upload-filelist button, #auiu-ft-upload-filelist button:hover {
+	background-color: inherit;
+	padding: 0;
+}
+ul.auiu-category-checklist {
+	margin: 0;
+	list-style: none;
+}
+.auiu-post-form .category-wrap {
+	position: relative;
+}
+.auiu-post-form .category-wrap select {
+	display: block;
+	margin: 0 0 5px 0;
+}
+.error {
+	clear: both;
+    background-color: #FFBABA;
+    border: 1px solid #DD3C10;
+    border-radius: 2px;
+    color: #D8000C;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    padding: 3px 12px;
+    text-shadow: none;
+    height: 30px;
+}
+#recaptcha_widget_div {
+	margin-left: 140px;
+}
+.auiu-post-form p.description {
+	color: #868686;
+	margin: 0;
+	padding: 3px 0 3px 25%;
+	font-size: 12px;
+}
+.auiu-post-form #wp-new-post-desc-wrap tr td {
+	padding: 0;
+}
+.clear {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.success {
+	clear: both;
+	background-color: #DFF2BF;
+	border: 1px solid #BCDF7D;
+	color: #4F8A10;
+	padding: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0 1px 0 #FFFFFF;
+	font-size: 13px;
+}
+.info { 
+	background-color: #fef5be;
+	border: 2px solid #fdd425;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 5px 10px;
+	margin: 0 0 10px 0;
+	font-size: 13px;
+}
+.invalid {
+    border: 1px solid #FF7272 !important;
+}
+input[type='checkbox'] #auiu-checkbox.requiredField.invalid {
+	background-color: #FF7272 !important;
+	color: #FF7272 !important;
+}
+.auiu-check-container span.invalid {
+	border: none !important;
+	color: #FFF;	
+	background-color: #FF7272;
+}
+#auiu-post-area li {
+	list-style: none;
+}
+span.required {
+	color: red;
+}
+.required {
+	margin-top: -7px;
+}
+.auiu-loading {
+	height: 16px;
+	width: 16px;
+	background: url('../images/wpspin_light.gif') no-repeat;
+	padding: 0;
+	margin: 5px 10px;
+	right: -40px;
+	top: 0;
+	float: left;
+}
+.auiu-post-form .cptch_wrap {
+    display: block !important;
+}
+.g-recaptcha {
+	width: 75%;
+	float: left;
+}
+/*#auiu-ft-upload-filelist img {
+	border: 1px solid #ddd;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+#auiu-attachment-upload-filelist .auiu-attachment {
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #eee;
+}
+#auiu-attachment-upload-filelist .auiu-attachment .attachment-name {
+	font-size: 12px;
+	margin: 0 0 0 15px;
+}
+#auiu-attachment-upload-filelist .auiu-attachment .button {    
+	padding: 3px 8px;
+	border: 1px solid #ccc;
+	background: #f2f2f2;
+	color: #333;
+	font-size: 12px;
+	margin: 0 0 0 15px;
+	border-radius: 5px;
+}
+#auiu-attachment-upload-pickfiles {
+	font-weight: bold;
+	color: #333;
+	padding: 3px 8px;
+	border: 1px solid #ccc;
+	background: #f2f2f2;
+	margin: 5px 0 15px 0;
+	border-radius: 5px;
+}
+#auiu-attachment-upload-filelist .handle {
+	background: url('../images/arrow-move.png') no-repeat;
+	cursor: move;
+	display: inline-block;
+	height: 16px;
+	margin: 0 10px 0 0;
+	padding: 0;
+	text-indent: -9999px;
+	width: 16px;
+}
+/*
+#content .auiu-profile table, .auiu-profile table {
+	border: none;
+}
+#content .auiu-profile legend, .auiu-profile legend {
+	border: 1px solid #eee;
+	padding: 5px 10px;
+}
+#content .auiu-profile th, #content .auiu-profile td, .auiu-profile th, .auiu-profile td {
+	vertical-align: top;
+	border-top: 1px solid #eee;
+	border: none;
+}
+#content .auiu-profile input, .auiu-profile input, .auiu-profile textarea {
+	border: 1px solid #CCCCCC;
+	margin: 0;
+	padding: 5px;
+}
+.auiu-profile h3, #content .auiu-profile h3 {
+	margin: 0;
+}
+.auiu-profile table, #content .auiu-profile table {
+	margin: 0 0 5px 0;
+}
+#content #editorcontainer tr td, #content #editorcontainer table {
+	padding: 0;
+	margin: 0;
+}
+
+table.auiu-table {
+	border: 1px solid #E7E7E7;
+	margin: 0 opx 10px 0;
+	text-align: left;
+	width: 100%;
+}
+table.auiu-table thead th, table.auiu-table th {
+	color: #888888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
+}
+table.auiu-table td {
+	border-top: 1px solid #E7E7E7;
+	padding: 6px 24px;
+}
+.post_count {
+	border: 1px solid #E7E7E7;
+	margin: 5px 0;
+	padding: 5px;
+}
+.post_count span {
+	font-weight: bold;
+}
+.auiu-pagination {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+}
+/** author info **/
+/*
+.auiu-author {
+	clear: both;
+	margin: 10px 0;
+}
+.auiu-author h3 { 
+	margin: 0 !important;
+	background: #CFCFCF;
+	text-align: left;
+	padding: 3px 10px;}
+.auiu-author-inside {
+	background: none repeat scroll 0 0 #F0F0F0;
+	border-bottom: 2px solid #DDDDDD;
+	height: 90px;
+	padding-left: 10px;
+	padding-top: 15px;
+	margin-bottom: 15px;
+}
+.auiu-author-inside .auiu-user-image {
+	float: left;
+	padding-right: 15px;
+}
+.auiu-author-body p {
+	margin-bottom: 10px !important;
+}
+.auiu-author-body p.auiu-user-name a {
+	color: #335160;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.auiu-author-inside p.auiu-author-info {
+	padding-top: 8px;
+}
+.invalid {
+	border: 1px solid #FF7272 !important;
+}
+#pass-strength-result {
+	border-radius: 6px 6px 6px 6px;
+	border-style: solid;
+	border-width: 1px;
+	float: left;
+	margin: 12px 5px 5px 1px;
+	padding: 7px;
+	text-align: center;
+	width: 248px;
+}
+#pass-strength-result.good {
+	background-color: #FFEC8B;
+	border-color: #FFCC00 !important;
+}#pass-strength-result {
+	background-color: #EEEEEE;
+	border-color: #DDDDDD !important;
+}
+#pass-strength-result.bad {
+	background-color: #FFB78C;
+	border-color: #FF853C !important;
+}
+#pass-strength-result.strong {
+	background-color: #C3FF88;
+	border-color: #8DFF1C !important;
+}
+#pass-strength-result.short {
+	background-color: #FFA0A0;
+	border-color: #F04040 !important;
+}
+.timestamp-wrap input {
+	width: 40px !important;
+}
+.auiu_sub_info {
+	padding: 0;
+	margin: 10px 5px;
+	border: 1px solid green;
+	border-radius: 5px;
+}
+.auiu_sub_info h3 {
+	margin: 0 0 5px 0 !important;    background: green;    color: #fff !important;    padding: 3px 10px !important;    font-weight: bold;}
+.auiu_sub_info .text {
+	padding: 5px 10px;
+}
+ul.auiu_packs {
+	overflow: hidden;
+	margin: 35px 0 15px;
+}
+ul.auiu_packs li {
+	background: #EEEEEE;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	float: left;
+	list-style: none outside none;
+	margin: 25px 25px 10px 0;
+	padding: 5px;
+	position: relative;
+	width: 200px;}
+ul.auiu_packs h3 {
+	padding: 10px !important;
+	font-size: 14px;
+	font-weight: bold;
+}
+ul.auiu_packs p {
+	padding: 0 10px;
+	margin-bottom: 8px;
+}
+.auiu_packs .cost {
+	background: red;
+	border-radius: 30px 30px 30px 30px;
+	color: #FFFFFF;
+	margin: -16px -12px 0 0;
+	padding: 10px 8px 8px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.auiu-pagination div.pagination{
+	text-align:center;
+	padding:7px;
+	margin:3px;
+}
+.auiu-pagination .page-numbers{
+	padding:2px 8px;
+	margin:2px;
+	border:1px solid #4A5154;
+	text-decoration:none;
+	color:#4A5154;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.auiu-pagination .page-numbers:hover,.auiu-pagination .page-numbers:active {
+	border:1px solid #4A5154;
+	background-color:#4A5154;
+	color:#fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.auiu-pagination .page-numbers.current{
+	padding:2px 8px;
+	margin:2px;
+	border:1px solid #4A5154;
+	font-weight:bold;
+	background-color:#4A5154;
+	color:#FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
