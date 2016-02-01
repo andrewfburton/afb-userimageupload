@@ -45,28 +45,31 @@ function auiu_settings_fields() {
                 'name' => 'title_help',
                 'label' => __( 'Post Title Help Text', 'auiu' ),
 				'desc' => __( 'The text visitors will see, helping them to fill out the post title field', 'auiu' ),
+				'default' => 'Please enter a title'
             ),
             array(
                 'name' => 'cat_label',
                 'label' => __( 'Post Category Label', 'auiu' ),
                 'default' => 'Category',
-				'desc' => __( 'Define the label of the "category" field', 'auiu' ),
+				'desc' => __( 'Define the label of the "category" field', 'auiu' )
             ),
             array(
                 'name' => 'cat_help',
                 'label' => __( 'Post Category Help Text', 'auiu' ),
 				'desc' => __( 'The text visitors will see, helping them choose a category', 'auiu' ),
+				'default' => 'Please select a category'
             ),
             array(
                 'name' => 'desc_label',
                 'label' => __( 'Post Description Label', 'auiu' ),
 				'default' => 'Description',
-                'desc' => __( 'Define the label of the description or comment field', 'auiu' ),
+                'desc' => __( 'Define the label of the description or comment field', 'auiu' )
             ),
             array(
                 'name' => 'desc_help',
                 'label' => __( 'Post Description Help Text', 'auiu' ),
 				'desc' => __( 'The text visitors will see, helping them fill in a description or comment', 'auiu' ),
+				'default' => 'Please describe your image'
             ),
             array(
                 'name' => 'tag_label',

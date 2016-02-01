@@ -47,8 +47,8 @@ class AUIU_Settings {
     function plugin_page() {
         ?>
         <div class="wrap">
-			<a href="http://www.ifihadthecash.org" target="_blank">
-                <img src="<?php echo plugins_url( '', dirname( __FILE__ ) ); ?>/images/banner-auiu.png" alt="ifihadthecash.org" title="AFB User Image Upload Plugin">
+			<a href="http://techpress.rocks" target="_blank">
+                <img src="<?php echo plugins_url( '', dirname( __FILE__ ) ); ?>/images/banner-auiu.png" alt="techpress.rocks" title="AFB User Image Upload Plugin">
             </a>
             <div class="clear"></div>
             <?php
