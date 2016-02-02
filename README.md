@@ -9,4 +9,4 @@ It's based on the last 1.x version WP User Frontend, with a lot of functionality
 ## How to Use
 See the book for details.
 
-~Current Version:1.0.1~
+~Current Version:1.0.0~
