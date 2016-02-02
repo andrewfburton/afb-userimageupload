@@ -4,7 +4,7 @@ Plugin Name: AFB User Image Upload
 Plugin URI: http://www.ifihadthecash.org
 Description: Let your web site visitors upload images, directly into your image gallery
 Author: Tareq Hasan & AFB
-Version: 1.0.1
+Version: 1.0.0
 Author URI: http://www.ifihadthecash.org
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,14 +25,14 @@ if ( is_admin() ) {
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
 	$config = array(
 		'slug' => plugin_basename( __FILE__ ),
-		'proper_folder_name' => 'afb-userimageupload',
+		'proper_folder_name' => dirname( plugin_basename( __FILE__ ) ),
 		'api_url' => 'https://api.github.com/repos/andrewfburton/afb-userimageupload',
 		'raw_url' => 'https://raw.github.com/andrewfburton/afb-userimageupload/master',
 		'github_url' => 'https://github.com/andrewfburton/afb-userimageupload',
 		'zip_url' => 'https://github.com/andrewfburton/afb-userimageupload/zipball/master',
 		'sslverify' => true,
 		'requires' => '3.0',
-		'tested' => '3.3',
+		'tested' => '4.4.1',
 		'readme' => 'README.md',
 		'access_token' => '',
 	);
