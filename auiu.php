@@ -24,6 +24,14 @@ if ( is_admin() ) {
 require_once 'auiu-add-post.php';
 require_once 'auiu-ajax.php';
 
+require 'plugin-update-checker/plugin-update-checker.php';
+$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
+$myUpdateChecker = new $className(
+    'https://github.com/andrewfburton/afb-userimageupload/',
+    __FILE__,
+    'master'
+);
+
 class auiu_Main {
 
     function __construct() {
