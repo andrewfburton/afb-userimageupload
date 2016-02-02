@@ -4,7 +4,7 @@ Plugin Name: AFB User Image Upload
 Plugin URI: http://www.ifihadthecash.org
 Description: Let your web site visitors upload images, directly into your image gallery
 Author: Tareq Hasan & AFB
-Version: 1.0.1
+Version: 1.0.0
 Author URI: http://www.ifihadthecash.org
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,6 +23,25 @@ if ( is_admin() ) {
  }
 require_once 'auiu-add-post.php';
 require_once 'auiu-ajax.php';
+
+		include_once 'updater.php';
+		define( 'WP_GITHUB_FORCE_UPDATE', true );
+		if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+			$config = array(
+				'slug' => plugin_basename( __FILE__ ),
+				'proper_folder_name' => 'github-updater',
+				'api_url' => 'https://api.github.com/repos/andrewfburton/afb-userimageupload',
+				'raw_url' => 'https://raw.github.com/andrewfburton/afb-userimageupload/master',
+				'github_url' => 'https://github.com/andrewfburton/afb-userimageupload',
+				'zip_url' => 'https://github.com/andrewfburton/afb-userimageupload/archive/master.zip',
+				'sslverify' => true,
+				'requires' => '3.0',
+				'tested' => '3.3',
+				'readme' => 'README.md',
+				'access_token' => '',
+			);
+			new WP_GitHub_Updater( $config );
+		}
 
 class auiu_Main {
 
@@ -56,25 +75,6 @@ class auiu_Main {
         ) ENGINE=MyISAM DEFAULT CHARSET=utf8";
 
         $wpdb->query( $sql_custom );
-		
-		include_once 'updater.php';
-		define( 'WP_GITHUB_FORCE_UPDATE', true );
-		if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
-			$config = array(
-				'slug' => plugin_basename( __FILE__ ),
-				'proper_folder_name' => 'github-updater',
-				'api_url' => 'https://api.github.com/repos/andrewfburton/afb-userimageupload',
-				'raw_url' => 'https://raw.github.com/andrewfburton/afb-userimageupload/master',
-				'github_url' => 'https://github.com/andrewfburton/afb-userimageupload',
-				'zip_url' => 'https://github.com/andrewfburton/afb-userimageupload/archive/master.zip',
-				'sslverify' => true,
-				'requires' => '3.0',
-				'tested' => '3.3',
-				'readme' => 'README.md',
-				'access_token' => '',
-			);
-			new WP_GitHub_Updater( $config );
-		}
     }
 
     function uninstall() {
