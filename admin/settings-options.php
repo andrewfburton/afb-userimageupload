@@ -20,7 +20,7 @@ function auiu_settings_sections() {
         ),
 		array(
             'id' => 'auiu_styles',
-            'title' => __( 'Form - Buttons', 'auiu' )
+            'title' => __( 'Form - Buttons/Fonts', 'auiu' )
         ),
         array(
             'id' => 'auiu_others',
@@ -76,6 +76,7 @@ function auiu_settings_fields() {
                 'label' => __( 'Post Tag Label', 'auiu' ),
                 'default' => 'Tags',
 				'desc' => __( 'Define the label for the tags field', 'auiu' ),
+				'default' => 'Please tag your image'
             ),
             array(
                 'name' => 'tag_help',
@@ -86,7 +87,7 @@ function auiu_settings_fields() {
                 'name' => 'submit_label',
                 'label' => __( 'Post Submit Button Label', 'auiu' ),
 				'desc' => __( 'Define the label of the submit button', 'auiu' ),
-                'default' => 'Submit Post!'
+                'default' => 'Submit Image!'
             ),
             array(
                 'name' => 'updating_label',
@@ -132,7 +133,7 @@ function auiu_settings_fields() {
                 'default' => '#4090BA'
             ),
 			array(
-                'name' => 'button_text',
+                'name' => 'button_textcolor',
                 'label' => __( 'Button Text Colour (hex code)', 'auiu' ),
 				'desc' => __( 'Insert the colour hex code you want for the button text. Default is white: #FFF', 'auiu' ),
                 'default' => '#FFF'
@@ -171,6 +172,60 @@ function auiu_settings_fields() {
                 'name' => 'button_size',
                 'label' => __( 'Button Font Size', 'auiu' ),
 				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
+                'default' => 'inherit'
+            ),
+			array(
+                'name' => 'label_size',
+                'label' => __( 'Form Fields Label - Font Size', 'auiu' ),
+				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
+                'default' => 'inherit'
+            ),
+			array(
+                'name' => 'label_weight',
+                'label' => __( 'Form Fields Label - Font Weight (Bold or Normal)', 'auiu' ),
+				'desc' => __( 'Set the font weight that you want. For exampe: bold. Default is normal.', 'auiu' ),
+                'default' => 'normal'
+            ),
+			array(
+                'name' => 'label_font',
+                'label' => __( 'Form Fields Label - Font Family', 'auiu' ),
+				'desc' => __( 'Insert font family information. For example: Montserrat,"Helvetica Neue",sans-serif', 'auiu' ),
+                'default' => 'inherit'
+            ),
+			array(
+                'name' => 'description_size',
+                'label' => __( 'Form Fields Description - Font Size', 'auiu' ),
+				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
+                'default' => 'inherit'
+            ),	
+			array(
+                'name' => 'description_font',
+                'label' => __( 'Form Fields Description - Font Family', 'auiu' ),
+				'desc' => __( 'Insert font family information. For example: Montserrat,"Helvetica Neue",sans-serif', 'auiu' ),
+                'default' => 'inherit'
+            ),
+			array(
+                'name' => 'dropfile_size',
+                'label' => __( 'Drop File Text - Font Size', 'auiu' ),
+				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
+                'default' => 'inherit'
+            ),
+			array(
+                'name' => 'dropfile_font',
+                'label' => __( 'Drop File Text - Font Family', 'auiu' ),
+				'desc' => __( 'Insert font family information. For example: Montserrat,"Helvetica Neue",sans-serif', 'auiu' ),
+                'default' => 'inherit'
+            ),			
+			array(
+                'name' => 'category_select_size',
+                'label' => __( 'Category Selection - Font Size', 'auiu' ),
+				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
+                'default' => 'inherit'
+            ),
+			array(
+                'name' => 'category_select_font',
+                'label' => __( 'Category Selection - Font Family', 'auiu' ),
+				'desc' => __( 'Insert font family information. For example: Montserrat,"Helvetica Neue",sans-serif', 'auiu' ),
                 'default' => 'inherit'
             )			
  		) ),	

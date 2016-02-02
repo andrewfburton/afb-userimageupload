@@ -348,75 +348,64 @@ add_filter( 'get_edit_post_link', 'auiu_edit_post_link', 10, 2 );
 function auiu_uploadername () {
 	global $wpdb;
 	$auiu_table = $wpdb->prefix . 'auiu_customfields';
-    $results = $wpdb->get_results( "SELECT * FROM $auiu_table WHERE `region`='top' ORDER BY `order`", OBJECT );
-    if ( is_array( $results ) ) {
-        foreach ($results as $field) {
-			if ( !isset( $field->field ) == 'cf_uploadername' ) {
-				$wpdb->replace ( $auiu_table,
-					array(
-						'id' => 1,
-						'field' => 'cf_uploadername',
-						'type' => 'text',
-						'values' => '',
-						'label' => 'Your Name',
-						'desc' => 'Please fill in your name',
-						'required' => 'yes',
-						'region' => 'top',
-						'order' => 0
-					)
-				);
-			}
-		}
+	$results = $wpdb->get_row( "SELECT * FROM $auiu_table WHERE field = 'cf_uploadername'", 0, 0);
+    if ( empty( $results ) ) {
+		$wpdb->insert ( $auiu_table,
+			array(
+				'id' => 1,
+				'field' => 'cf_uploadername',
+				'type' => 'text',
+				'values' => '',
+				'label' => 'Your Name',
+				'desc' => 'Please fill in your name',
+				'required' => 'yes',
+				'region' => 'top',
+				'order' => 0
+			)
+		);
 	}	
 }	
 function auiu_uploaderemail () {
 	global $wpdb;
 	$auiu_table = $wpdb->prefix . 'auiu_customfields';
-    $results = $wpdb->get_results( "SELECT * FROM $auiu_table WHERE `region`='top' ORDER BY `order`", OBJECT );
-    if ( is_array( $results ) ) {
-        foreach ($results as $field) {
-			if ( !isset( $field->field ) == 'cf_uploaderemail' ) {
-				$wpdb->replace ( $auiu_table,
-					array(
-						'id' => 2,
-						'field' => 'cf_uploaderemail',
-						'type' => 'text',
-						'values' => '',
-						'label' => 'Your Email',
-						'desc' => 'Please fill in your Email address',
-						'required' => 'yes',
-						'region' => 'top',
-						'order' => 1
-					)
-				);
-			}
-		}
+	$results = $wpdb->get_row( "SELECT * FROM $auiu_table WHERE field = 'cf_uploaderemail'", 0, 0);
+	if ( empty( $results ) ) {
+		$wpdb->insert ( $auiu_table,
+			array(
+				'id' => 2,
+				'field' => 'cf_uploaderemail',
+				'type' => 'text',
+				'values' => '',
+				'label' => 'Your Email',
+				'desc' => 'Please fill in your Email address',
+				'required' => 'yes',
+				'region' => 'top',
+				'order' => 1
+			)
+		);
 	}	
-}
+}		   
+
 function auiu_uploaderagree () {
 	global $wpdb;
 	$auiu_table = $wpdb->prefix . 'auiu_customfields';
-    $results = $wpdb->get_results( "SELECT * FROM $auiu_table WHERE `region`='top' ORDER BY `order`", OBJECT );
-    if ( is_array( $results ) ) {
-        foreach ($results as $field) {
-			if ( !isset( $field->field ) == 'cf_agreed' ) {
-				$wpdb->replace ( $auiu_table,
-					array(
-						'id' => 3,
-						'field' => 'cf_agreed',
-						'type' => 'checkbox',
-						'values' => 'Yes',
-						'label' => 'Yes I Agree',
-						'desc' => 'I certify that by submitting the above information and photograph that I have first read and hereby agree to be bound by the Term of Use Agreement.',
-						'required' => 'yes',
-						'region' => 'bottom',
-						'order' => 0,
-					)
-				);
-			}
-		}
-	}		
-}
+    $results = $wpdb->get_row( "SELECT * FROM $auiu_table WHERE field = 'cf_agreed'", 0, 0);
+    if ( empty( $results ) ) {
+		$wpdb->insert ( $auiu_table,
+			array(
+				'id' => 3,
+				'field' => 'cf_agreed',
+				'type' => 'checkbox',
+				'values' => 'Yes',
+				'label' => 'Yes I Agree',
+				'desc' => 'I certify that by submitting the above information and photograph that I have first read and hereby agree to be bound by the Term of Use Agreement.',
+				'required' => 'yes',
+				'region' => 'bottom',
+				'order' => 0,
+			)
+		);
+	}	
+}		   		
 function auiu_delete_uploadername () {
 	global $wpdb;
  	$auiu_table = $wpdb->prefix . 'auiu_customfields';
@@ -744,34 +733,44 @@ if ( $enable_styles == 'yes' ) {
 			add_action( 'wp_head', 'auiu_custom_styles', 999 );
 	}
 function auiu_custom_styles() {
-	$button_back = auiu_get_option( 'button_background', 'auiu_styles' );
-	$button_text = auiu_get_option( 'button_text', 'auiu_styles' );
-	$button_hover_back = auiu_get_option( 'button_hoverback', 'auiu_styles' );
-	$button_hover_text = auiu_get_option( 'button_hovertext', 'auiu_styles' );
+	$button_background = auiu_get_option( 'button_background', 'auiu_styles' );
+	$button_textcolor = auiu_get_option( 'button_textcolor', 'auiu_styles' );
+	$button_hoverback = auiu_get_option( 'button_hoverback', 'auiu_styles' );
+	$button_hovertext = auiu_get_option( 'button_hovertext', 'auiu_styles' );
 	$button_radius = (int) auiu_get_option( 'button_radius', 'auiu_styles' );
 	$button_font = auiu_get_option( 'button_font', 'auiu_styles' );
 	$button_transform = auiu_get_option( 'button_transform', 'auiu_styles' );
-	$button_size = auiu_get_option( 'button_size', 'auiu_styles' );
+	$button_size = (int) auiu_get_option( 'button_size', 'auiu_styles' );
+	
+	$label_size = (int) auiu_get_option( 'label_size', 'auiu_styles' );
+	$label_weight = auiu_get_option( 'label_weight', 'auiu_styles' );
+	$label_font = auiu_get_option( 'label_font', 'auiu_styles' );
+	$description_size = (int) auiu_get_option( 'description_size', 'auiu_styles' );
+	$description_font = auiu_get_option( 'description_font', 'auiu_styles' );
+	$dropfile_size = auiu_get_option( 'dropfile_size', 'auiu_styles' );
+	$dropfile_font = auiu_get_option( 'dropfile_font', 'auiu_styles' );
+	$category_select_size = (int) auiu_get_option( 'category_select_size', 'auiu_styles' );
+	$category_select_font = auiu_get_option( 'category_select_font', 'auiu_styles' );
 	?>
 	<style type="text/css">
 		a#auiu-ft-upload-pickfiles, #auiu-ft-upload-filelist .button { 
-			background: none repeat scroll 0 0 <?php echo $button_back; ?>;
+			background: none repeat scroll 0 0 <?php echo $button_background; ?>;
 			border: none; 
-			color: <?php echo $button_text; ?>;
+			color: <?php echo $button_textcolor; ?>;
 			border-radius: <?php echo $button_radius; ?>px;
 			font-family: <?php echo $button_font; ?>;
 			text-transform: <?php echo $button_transform; ?>;
 			font-size: <?php echo $button_size; ?>px;
 		}
 		a#auiu-ft-upload-pickfiles:hover, #auiu-ft-upload-filelist .button:hover { 
-			background: none repeat scroll 0 0 <?php echo $button_hover_back; ?>;
+			background: none repeat scroll 0 0 <?php echo $button_hoverback; ?>;
 			border: none; 
-			color: <?php echo $button_hover_text; ?>;
+			color: <?php echo $button_hovertext; ?>;
 		}
 		.auiu-post-form input[type="submit"] { 
 			background: none repeat scroll 0 0 <?php echo $button_back; ?>;
 			border: none; 
-			color: <?php echo $button_text; ?>;
+			color: <?php echo $button_textcolor; ?>;
 			border-radius: <?php echo $button_radius; ?>px;
 			font-family: <?php echo $button_font; ?>;
 			text-transform: <?php echo $button_transform; ?>;
@@ -780,8 +779,25 @@ function auiu_custom_styles() {
 		.auiu-post-form input[type="submit"]:hover { 
 			background: none repeat scroll 0 0 <?php echo $button_hover_back; ?>;
 			border: none; 
-			color: <?php echo $button_hover_text; ?>;
+			color: <?php echo $button_hovertext; ?>;
+		}
+		.auiu-post-form label {
+			font-size: <?php echo $label_size; ?>px;
+			font-weight: <?php echo $label_weight; ?>;
+			font-family: <?php echo $label_font; ?>;
 		}	
+		.auiu-post-form p.description {
+			font-size: <?php echo $description_size; ?>px;
+			font-family: <?php echo $description_font; ?>;
+		}
+		.auiu-dropfile-text {
+			font-size: <?php echo $dropfile_size; ?>px;
+			font-family: <?php echo $dropfile_font; ?>;
+		}	
+		.auiu-post-form .category-wrap select {
+			font-size: <?php echo $category_select_size; ?>px;
+			font-family: <?php echo $category_select_fontt; ?>;		
+		}
 	</style>
 <?php
 }
