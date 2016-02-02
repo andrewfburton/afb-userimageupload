@@ -4,7 +4,7 @@ Plugin Name: AFB User Image Upload
 Plugin URI: http://www.ifihadthecash.org
 Description: Let your web site visitors upload images, directly into your image gallery
 Author: Tareq Hasan & AFB
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://www.ifihadthecash.org
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -67,7 +67,8 @@ class auiu_Main {
     }
 
     function uninstall() {
-
+		global $wpdb;
+		$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}auiu_customfields" );
     }
     /**
      * Enqueues Styles and Scripts when the shortcodes are used only
