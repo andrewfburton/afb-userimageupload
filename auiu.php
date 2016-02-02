@@ -29,7 +29,7 @@ require_once 'auiu-ajax.php';
 		if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
 			$config = array(
 				'slug' => plugin_basename( __FILE__ ),
-				'proper_folder_name' => 'afb-userimageupload-master',
+				'proper_folder_name' => 'afb-userimageupload',
 				'api_url' => 'https://api.github.com/repos/andrewfburton/afb-userimageupload',
 				'raw_url' => 'https://raw.github.com/andrewfburton/afb-userimageupload/master',
 				'github_url' => 'https://github.com/andrewfburton/afb-userimageupload',
