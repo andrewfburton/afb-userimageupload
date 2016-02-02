@@ -4,7 +4,7 @@ Plugin Name: AFB User Image Upload
 Plugin URI: http://techpress.rocks
 Description: Let your web site visitors upload images, directly into your image gallery
 Author: Tareq Hasan & AFB
-Version: 1.0.1
+Version: 1.0.0
 Author URI: http://techpress.rocks
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
