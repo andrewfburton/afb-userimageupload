@@ -28,7 +28,7 @@ if ( is_admin() ) {
 require_once 'auiu-add-post.php';
 require_once 'auiu-ajax.php';
 
-class auiu_Main {
+class AUIU_Main {
 
     function __construct() {
         register_activation_hook( __FILE__, array($this, 'install') );
@@ -162,4 +162,4 @@ class auiu_Main {
         }
     }
 }
-$auiu = new auiu_Main();
+$auiu = new AUIU_Main();

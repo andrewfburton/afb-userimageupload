@@ -196,7 +196,7 @@ function auiu_settings_fields() {
                 'name' => 'description_size',
                 'label' => __( 'Form Fields Description - Font Size', 'auiu' ),
 				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
-                'default' => 'inherit'
+                'default' => '14'
             ),	
 			array(
                 'name' => 'description_font',
@@ -208,7 +208,7 @@ function auiu_settings_fields() {
                 'name' => 'dropfile_size',
                 'label' => __( 'Drop File Text - Font Size', 'auiu' ),
 				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
-                'default' => 'inherit'
+                'default' => '16'
             ),
 			array(
                 'name' => 'dropfile_font',
@@ -220,7 +220,7 @@ function auiu_settings_fields() {
                 'name' => 'category_select_size',
                 'label' => __( 'Category Selection - Font Size', 'auiu' ),
 				'desc' => __( 'Insert the font size that you want. For exampe: 16. This will translate into 16 pixels.', 'auiu' ),
-                'default' => 'inherit'
+                'default' => '14'
             ),
 			array(
                 'name' => 'category_select_font',

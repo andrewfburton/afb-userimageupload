@@ -89,11 +89,10 @@ a#auiu-ft-upload-pickfiles, #auiu-ft-upload-filelist .button {
 	margin-bottom: 8px;
 	z-index: 99999999;
 }
-/*#auiu-ft-upload-pickfiles:active {
-	text-decoration: none;
-	color: #FFF;
-	background: #3981A7;
-}*/
+.auiu-dropfile-text {
+	float: right;
+	padding-right: 20px;
+}	
 a#auiu-ft-upload-pickfiles:hover, #auiu-ft-upload-filelist .button:hover { 
 	text-decoration: none;
 	color: #FFF;

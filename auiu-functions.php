@@ -261,15 +261,17 @@ function auiu_get_taxonomies() {
     return $cats;
 }
 function auiu_get_cats() {
-$default_taxonomy = get_option('auiu_frontend_posting');
-	$cats = get_terms( $default_taxonomy['default_taxonomy'],array('hide_empty' => false) );
-    $list = array();
-    if ( $cats ) {
-        foreach ($cats as $cat) {
-            $list[$cat->term_id] = $cat->name;
-        }
-    }
-    return $list;
+	$default_taxonomy = get_option('auiu_frontend_posting');
+	if ( !empty( $default_taxonomy ) ) {
+		$cats = get_terms( $default_taxonomy['default_taxonomy'],array('hide_empty' => false) );
+		$list = array();
+		if ( $cats ) {
+			foreach ($cats as $cat) {
+				$list[$cat->term_id] = $cat->name;
+			}
+		}
+		return $list;
+	}	
 }
 /**
  * Get lists of users from database
@@ -751,6 +753,7 @@ function auiu_custom_styles() {
 	$dropfile_font = auiu_get_option( 'dropfile_font', 'auiu_styles' );
 	$category_select_size = (int) auiu_get_option( 'category_select_size', 'auiu_styles' );
 	$category_select_font = auiu_get_option( 'category_select_font', 'auiu_styles' );
+	
 	?>
 	<style type="text/css">
 		a#auiu-ft-upload-pickfiles, #auiu-ft-upload-filelist .button { 
@@ -796,7 +799,7 @@ function auiu_custom_styles() {
 		}	
 		.auiu-post-form .category-wrap select {
 			font-size: <?php echo $category_select_size; ?>px;
-			font-family: <?php echo $category_select_fontt; ?>;		
+			font-family: <?php echo $category_select_font; ?>;		
 		}
 	</style>
 <?php
