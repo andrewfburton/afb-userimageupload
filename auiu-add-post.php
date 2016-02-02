@@ -225,7 +225,6 @@ class AUIU_Add_Post {
 			}
 		}	
 		global $userdata;
-		//die( var_dump ( $_POST ));
 
 		//if there is some attachement, validate them
         if ( !empty( $_FILES['auiu_post_attachments'] ) ) {
