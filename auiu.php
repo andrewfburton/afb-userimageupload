@@ -4,7 +4,7 @@ Plugin Name: AFB User Image Upload
 Plugin URI: http://www.ifihadthecash.org
 Description: Let your web site visitors upload images, directly into your image gallery
 Author: Tareq Hasan & AFB
-Version: 1.0.2
+Version: 1.0.0
 Author URI: http://www.ifihadthecash.org
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,22 +21,9 @@ if ( is_admin() ) {
     require_once 'admin/custom-fields.php';
     require_once 'admin/taxonomy.php';
 	
-	include_once 'updater.php';
-	define( 'WP_GITHUB_FORCE_UPDATE', true );
-	$config = array(
-		'slug' => plugin_basename( __FILE__ ),
-		'proper_folder_name' => dirname( plugin_basename( __FILE__ ) ),
-		'api_url' => 'https://api.github.com/repos/andrewfburton/afb-userimageupload',
-		'raw_url' => 'https://raw.github.com/andrewfburton/afb-userimageupload/master',
-		'github_url' => 'https://github.com/andrewfburton/afb-userimageupload',
-		'zip_url' => 'https://github.com/andrewfburton/afb-userimageupload/zipball/master',
-		'sslverify' => true,
-		'requires' => '3.0',
-		'tested' => '4.4.1',
-		'readme' => 'README.md',
-		'access_token' => '',
-	);
-			new WP_GitHub_Updater( $config );
+	require 'plugin-update-checker/plugin-update-checker.php';
+	$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
+	$myUpdateChecker = new $className( 'https://github.com/andrewfburton/afb-userimageupload/',__FILE__,'master');
  }
 require_once 'auiu-add-post.php';
 require_once 'auiu-ajax.php';
